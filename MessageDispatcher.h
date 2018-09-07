@@ -6,7 +6,7 @@
 #include <set>
 
 
-#include "misc/ConsoleUtils.h"
+#include "ConsoleUtils.h"
 #include "Telegram.h"
 
 class BaseGameEntity;

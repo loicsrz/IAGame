@@ -7,9 +7,9 @@
 
 #include "BaseGameEntity.h"
 #include "Locations.h"
-#include "misc/ConsoleUtils.h"
+#include "ConsoleUtils.h"
 #include "MinerOwnedStates.h"
-#include "fsm/StateMachine.h"
+#include "StateMachine.h"
 
 class State;
 struct Telegram;
