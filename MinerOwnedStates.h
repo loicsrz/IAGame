@@ -1,7 +1,7 @@
 #ifndef MINER_OWNED_STATES_H
 #define MINER_OWNED_STATES_H
 
-#include "fsm/State.h"
+#include "State.h"
 
 
 class Miner;

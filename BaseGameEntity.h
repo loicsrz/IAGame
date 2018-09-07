@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "messaging/Telegram.h"
+#include "Telegram.h"
 
 
 class BaseGameEntity

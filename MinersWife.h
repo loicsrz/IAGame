@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "fsm/State.h"
+#include "State.h"
 #include "BaseGameEntity.h"
 #include "Locations.h"
 #include "MinersWifeOwnedStates.h"
