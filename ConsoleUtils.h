@@ -22,7 +22,7 @@ inline void PressAnyKeyToContinue()
 
   std::cout << "\n\nPress any key to continue" << std::endl; 
 
-  while (!kbhit()){}
+  while (!_kbhit()){}
 
   return;
 }
