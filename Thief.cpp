@@ -14,3 +14,17 @@ void Thief::Update()
 
 	m_pStateMachine->Update();
 }
+
+void Thief::AddToGoldCarried(const int val)
+{
+	m_iGoldCarried += val;
+
+	if (m_iGoldCarried < 0) m_iGoldCarried = 0;
+}
+
+void Thief::AddToTreasure(const int val)
+{
+	m_iMoneyInThiefHouse += val;
+
+	if (m_iMoneyInThiefHouse < 0) m_iMoneyInThiefHouse = 0;
+}
