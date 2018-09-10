@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Repo%27s\IAGame\CrudeTimer.cpp" />
+    <ClCompile Include="CrudeTimer.cpp" />
     <ClCompile Include="BaseGameEntity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="main.cpp" />
