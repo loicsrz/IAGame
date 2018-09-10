@@ -9,7 +9,7 @@
 #include <string>
 
 #include "State.h"
-#include "Messaging/Telegram.h"
+#include "Telegram.h"
 
 
 template <class entity_type>

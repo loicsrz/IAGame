@@ -6,8 +6,8 @@
 #include <set>
 
 
-#include "misc/ConsoleUtils.h"
-#include "messaging/Telegram.h"
+#include "ConsoleUtils.h"
+#include "Telegram.h"
 
 class BaseGameEntity;
 

@@ -7,11 +7,11 @@
 
 #include "BaseGameEntity.h"
 #include "Locations.h"
-#include "misc/ConsoleUtils.h"
+#include "ConsoleUtils.h"
 #include "MinerOwnedStates.h"
-#include "fsm/StateMachine.h"
+#include "StateMachine.h"
+#include "State.h"
 
-class State;
 struct Telegram;
 
 //the amount of gold a miner must have before he feels he can go home

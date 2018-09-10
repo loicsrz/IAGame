@@ -1,7 +1,7 @@
 #ifndef MINERSWIFE_OWNED_STATES_H
 #define MINERSWIFE_OWNED_STATES_H
 
-#include "fsm/State.h"
+#include "State.h"
 
 class MinersWife;
 
