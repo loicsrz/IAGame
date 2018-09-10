@@ -39,7 +39,7 @@
     <ClCompile Include="MinersWifeOwnedStates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Repo%27s\IAGame\CrudeTimer.cpp">
+    <ClCompile Include="CrudeTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
