@@ -55,8 +55,8 @@ public:
 	location_type Location()const { return m_Location; }
 	void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-	bool          Cooking()const { return m_bStealing; }
-	void          SetCooking(bool val) { m_bStealing = val; }
+	bool          Stealing()const { return m_bStealing; }
+	void          SetStealing(bool val) { m_bStealing = val; }
 
 	int           GoldCarried()const { return m_iGoldCarried; }
 	void          SetGoldCarried(int val) { m_iGoldCarried = val; }
