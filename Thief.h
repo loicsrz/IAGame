@@ -9,9 +9,9 @@
 struct Telegram;
 
 //the amount of nuggets a thief can carry
-const int MaxNuggets = 2;
+const int MaxNuggetsLupin = 2;
 //the amount of gold a thief must have before he feels his treasure is enought.
-const int ComfortLevel = 8;
+const int ComfortLevelLupin = 8;
 
 
 
@@ -61,7 +61,7 @@ public:
 	int           GoldCarried()const { return m_iGoldCarried; }
 	void          SetGoldCarried(int val) { m_iGoldCarried = val; }
 	void          AddToGoldCarried(int val);
-	bool          PocketsFull()const { return m_iGoldCarried >= MaxNuggets; }
+	bool          PocketsFull()const { return m_iGoldCarried >= MaxNuggetsLupin; }
 
 	int           Treasure()const { return m_iMoneyInThiefHouse; }
 	void          SetTreasure(int val) { m_iMoneyInThiefHouse = val; }

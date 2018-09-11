@@ -71,7 +71,7 @@ void EnterBankAndStealTheNugget::Exit(Thief* pThief)
 {
 	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": "
 		<< "Leaving the bank";
-	pThief->SetStealing(FALSE);
+	pThief->SetStealing(false);
 }
 
 bool EnterBankAndStealTheNugget::OnMessage(Thief* pThief, const Telegram& msg)
@@ -86,7 +86,7 @@ bool EnterBankAndStealTheNugget::OnMessage(Thief* pThief, const Telegram& msg)
 			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
 				" at time: " << Clock->GetCurrentTime();
 
-			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetTextColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": Time to get out of the bank";
 
 			pThief->SetStealing(false);
@@ -98,7 +98,7 @@ bool EnterBankAndStealTheNugget::OnMessage(Thief* pThief, const Telegram& msg)
 			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
 				" at time: " << Clock->GetCurrentTime();
 
-			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			SetTextColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": No, i surrender, don't kill me !";
 
 			pThief->SetStealing(false);
@@ -142,7 +142,7 @@ void GoBackToHouseWithNugget::Execute(Thief* pThief)
 
 	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": " << "Store his stolen nuggets";
 
-	if (pThief->Treasure() < ComfortLevel) 
+	if (pThief->Treasure() < ComfortLevelLupin) 
 	{
 		pThief->GetFSM()->ChangeState(EnterBankAndStealTheNugget::Instance());
 	}
