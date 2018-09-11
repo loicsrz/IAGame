@@ -26,12 +26,16 @@ private:
 	int                   m_iGoldCarried;
 	int                   m_iMoneyInThiefHouse;
 
-	//is she presently stealing ?
+	//is he presently stealing ?
 	bool            m_bStealing;
+
+	// is he in prison ?
+	bool			m_bInPrison;
 
 public:
 	Thief(int id):m_Location(thief_house),
 						m_bStealing(false),
+						m_bInPrison(false),
 						BaseGameEntity(id)
 	{
 		//set up state machine
@@ -42,10 +46,8 @@ public:
 	}
 	~Thief() { delete m_pStateMachine;}
 
-	//this must be implemented
 	void          Update();
 
-	//so must this
 	virtual bool  HandleMessage(const Telegram& msg);
 
 	StateMachine<Thief>* GetFSM()const { return m_pStateMachine; }
@@ -57,6 +59,9 @@ public:
 
 	bool          Stealing()const { return m_bStealing; }
 	void          SetStealing(bool val) { m_bStealing = val; }
+
+	bool          InPrison()const { return m_bInPrison; }
+	void          SetInPrison(bool val) { m_bInPrison = val; }
 
 	int           GoldCarried()const { return m_iGoldCarried; }
 	void          SetGoldCarried(int val) { m_iGoldCarried = val; }

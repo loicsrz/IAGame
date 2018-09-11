@@ -9,8 +9,8 @@ bool Thief::HandleMessage(const Telegram& msg)
 
 void Thief::Update()
 {
-	//set text color to green
-	SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+	//set text color to blue
+	SetTextColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
 	m_pStateMachine->Update();
 }
