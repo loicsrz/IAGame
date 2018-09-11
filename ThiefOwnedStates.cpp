@@ -36,7 +36,7 @@ void EnterBankAndStealTheNugget::Enter(Thief* pThief)
 	}
 	if (!pThief->Stealing())
 	{
-		cout << "\n" << GetNameOfEntity(pThief->ID()) << ": EveryBody calm down, it's a robbery !";
+		cout << "\n" << GetNameOfEntity(pThief->ID()) << ": EveryBody calm down, it's a heist !";
 
 		//send a delayed message myself so that I know when to take the stew
 		//out of the oven
@@ -113,10 +113,12 @@ bool EnterBankAndStealTheNugget::OnMessage(Thief* pThief, const Telegram& msg)
 			pThief->GetFSM()->ChangeState(GoToPrisonWithMiner::Instance());
 		}
 		return true;
-	}//end switch
-	return false;
+		}//end switch
+		return false;
+	}
 }
 
+///TODO ///
 //------------------------------------------------------------------------methods for GoBackToHouseWithNugget
 
 GoBackToHouseWithNugget* GoBackToHouseWithNugget::Instance()
@@ -138,3 +140,159 @@ void GoBackToHouseWithNugget::Enter(Thief* pThief)
 	}
 }
 
+void GoBackToHouseWithNugget::Execute(Thief* pThief)
+{
+	//Now the miner is at the goldmine he digs for gold until he
+	//is carrying in excess of MaxNuggets. If he gets thirsty during
+	//his digging he packs up work for a while and changes state to
+	//gp to the saloon for a whiskey.
+	pThief->AddToGoldCarried(1);
+
+	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": " << "Steal a nugget";
+
+	//if enough gold mined, go and put it in the bank
+	if (pThief->PocketsFull())
+	{
+		pThief->GetFSM()->ChangeState(GoBackToHouseWithNugget::Instance());
+	}
+}
+
+void GoBackToHouseWithNugget::Exit(Thief* pThief)
+{
+	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": "
+		<< "Leaving the bank";
+	pThief->SetStealing(FALSE);
+}
+
+bool GoBackToHouseWithNugget::OnMessage(Thief* pThief, const Telegram& msg)
+{
+	{
+		SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+		switch (msg.Msg)
+		{
+		case Msg_ThiefInTheBank:
+		{
+			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
+				" at time: " << Clock->GetCurrentTime();
+
+			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": Time to get out of the bank";
+
+			//let hubby know the stew is ready
+			Dispatch->DispatchMessage(3,
+				pThief->ID(),
+				pThief->ID(),
+				Msg_GetBackToWork,
+				NO_ADDITIONAL_INFO);
+
+			pThief->SetStealing(false);
+
+			pThief->GetFSM()->ChangeState(GoBackToHouseWithNugget::Instance());
+		}
+		case Msg_HoldUp:
+		{
+			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
+				" at time: " << Clock->GetCurrentTime();
+
+			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": No, i surrender, don't kill me !";
+
+			pThief->SetStealing(false);
+
+			pThief->GetFSM()->ChangeState(GoToPrisonWithMiner::Instance());
+		}
+		return true;
+		}//end switch
+		return false;
+	}
+}
+
+//------------------------------------------------------------------------methods for GoToPrisonWithMiner
+
+GoToPrisonWithMiner* GoToPrisonWithMiner::Instance()
+{
+	static GoToPrisonWithMiner instance;
+
+	return &instance;
+}
+
+void GoToPrisonWithMiner::Enter(Thief* pThief)
+{
+	//if the miner is not already located at the goldmine, he must
+	//change location to the gold mine
+	if (pThief->Location() != thief_house)
+	{
+		cout << "\n" << GetNameOfEntity(pThief->ID()) << ": " << "Walkin' to my house";
+
+		pThief->ChangeLocation(thief_house);
+	}
+}
+
+void GoToPrisonWithMiner::Execute(Thief* pThief)
+{
+	//Now the miner is at the goldmine he digs for gold until he
+	//is carrying in excess of MaxNuggets. If he gets thirsty during
+	//his digging he packs up work for a while and changes state to
+	//gp to the saloon for a whiskey.
+	pThief->AddToGoldCarried(1);
+
+	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": " << "Steal a nugget";
+
+	//if enough gold mined, go and put it in the bank
+	if (pThief->PocketsFull())
+	{
+		pThief->GetFSM()->ChangeState(GoToPrisonWithMiner::Instance());
+	}
+}
+
+void GoToPrisonWithMiner::Exit(Thief* pThief)
+{
+	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": "
+		<< "Leaving the bank";
+	pThief->SetStealing(FALSE);
+}
+
+bool GoToPrisonWithMiner::OnMessage(Thief* pThief, const Telegram& msg)
+{
+	{
+		SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+		switch (msg.Msg)
+		{
+		case Msg_ThiefInTheBank:
+		{
+			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
+				" at time: " << Clock->GetCurrentTime();
+
+			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": Time to get out of the bank";
+
+			//let hubby know the stew is ready
+			Dispatch->DispatchMessage(3,
+				pThief->ID(),
+				pThief->ID(),
+				Msg_GetBackToWork,
+				NO_ADDITIONAL_INFO);
+
+			pThief->SetStealing(false);
+
+			pThief->GetFSM()->ChangeState(GoToPrisonWithMiner::Instance());
+		}
+		case Msg_HoldUp:
+		{
+			cout << "\nMessage received by " << GetNameOfEntity(pThief->ID()) <<
+				" at time: " << Clock->GetCurrentTime();
+
+			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": No, i surrender, don't kill me !";
+
+			pThief->SetStealing(false);
+
+			pThief->GetFSM()->ChangeState(GoToPrisonWithMiner::Instance());
+		}
+		return true;
+		}//end switch
+		return false;
+	}
+}

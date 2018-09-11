@@ -35,10 +35,9 @@ inline std::string MsgToStr(int msg)
 
   case 5:
 
-	return "HoldUp"
+	  return "HoldUp";
 
   default:
-
     return "Not recognized!";
   }
 }

@@ -45,7 +45,7 @@ private:
 public:
 
 	//this is a singleton
-	static EnterBankAndStealTheNugget* Instance();
+	static GoBackToHouseWithNugget* Instance();
 
 	virtual void Enter(Thief* miner);
 

@@ -137,6 +137,7 @@
     <ClCompile Include="MinersWife.cpp" />
     <ClCompile Include="MinersWifeOwnedStates.cpp" />
     <ClCompile Include="Thief.cpp" />
+    <ClCompile Include="ThiefOwnedStates.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="State.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="MinersWife.h" />
     <ClInclude Include="MinersWifeOwnedStates.h" />
     <ClInclude Include="Thief.h" />
+    <ClInclude Include="ThiefOwnedStates.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
