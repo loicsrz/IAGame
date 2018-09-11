@@ -8,7 +8,6 @@ enum message_type
   Msg_HiHoneyImHome,
   Msg_StewReady,
   Msg_ThiefInTheBank,
-  Msg_GetBackToWork,
   Msg_HoldUp,
 };
 
@@ -30,10 +29,6 @@ inline std::string MsgToStr(int msg)
 	return "ThiefInTheBank";
 
   case 4:
-
-	return "GetBackToWork";
-
-  case 5:
 
 	  return "HoldUp";
 

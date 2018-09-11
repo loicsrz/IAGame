@@ -89,13 +89,6 @@ bool EnterBankAndStealTheNugget::OnMessage(Thief* pThief, const Telegram& msg)
 			SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 			cout << "\n" << GetNameOfEntity(pThief->ID()) << ": Time to get out of the bank";
 
-			//let hubby know the stew is ready
-			Dispatch->DispatchMessage(3,
-				pThief->ID(),
-				pThief->ID(),
-				Msg_GetBackToWork,
-				NO_ADDITIONAL_INFO);
-
 			pThief->SetStealing(false);
 
 			pThief->GetFSM()->ChangeState(GoBackToHouseWithNugget::Instance());
