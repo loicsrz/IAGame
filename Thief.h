@@ -9,7 +9,7 @@
 struct Telegram;
 
 //the amount of nuggets a thief can carry
-const int MaxNuggets = 5;
+const int MaxNuggets = 2;
 //the amount of gold a thief must have before he feels his treasure is enought.
 const int ComfortLevel = 8;
 
