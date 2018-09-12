@@ -26,7 +26,7 @@ EnterBankAndStealTheNugget* EnterBankAndStealTheNugget::Instance()
 
 void EnterBankAndStealTheNugget::Enter(Thief* pThief)
 {
-	//if the thief is not in the bank, he is moved to the bank.
+	//if the thief is not in the bank, he moves to the bank.
 	if (pThief->Location() != bank)
 	{
 		cout << "\n" << GetNameOfEntity(pThief->ID()) << ": " << "Walkin' to the bank";
