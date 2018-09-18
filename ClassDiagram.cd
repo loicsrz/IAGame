@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CrudeTimer">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAACAAAAAAAAAAAAIAQAAgAAAAAAA=</HashCode>
+      <FileName>CrudeTimer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityManager">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="EntityManager::EntityMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>EntityManager.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAABQBAAAAAAAAAAAAQAAgAAAAQAA=</HashCode>
+      <FileName>EntityManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageDispatcher">
+    <Position X="19.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAEAAAAAAAIAAAAAAAQQAAgAAAAAQA=</HashCode>
+      <FileName>MessageDispatcher.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateMachine&lt;entity_type&gt;">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQEIBAgIAJBAAAAAAAASAAAAAgIAABCAAAgAAAQAA=</HashCode>
+      <FileName>StateMachine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookStew">
+    <Position X="22.75" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAABAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinersWifeOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoHouseWork">
+    <Position X="54.25" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAYACgAAABAAA=</HashCode>
+      <FileName>MinersWifeOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EatStew">
+    <Position X="0.75" Y="3" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinerOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnterBankAndStealTheNugget">
+    <Position X="16.5" Y="3" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>ThiefOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnterMineAndDigForNugget">
+    <Position X="10.5" Y="3" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAIAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinerOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoBackToHouseWithNugget">
+    <Position X="43.75" Y="3" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>ThiefOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoHomeAndSleepTilRested">
+    <Position X="32.25" Y="3" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinerOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoToPrisonWithMiner">
+    <Position X="5.25" Y="3" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQgAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>ThiefOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuenchThirst">
+    <Position X="49.75" Y="3" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinerOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="State&lt;entity_type&gt;">
+    <Position X="30" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAIACAABAAAAA=</HashCode>
+      <FileName>State.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisitBankAndDepositGold">
+    <Position X="38" Y="3" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinerOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisitBathroom">
+    <Position X="59" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAACAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinersWifeOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WifesGlobalState">
+    <Position X="27.5" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAQAAAAAAAAAAAAEAAAAYACgAAAAAAA=</HashCode>
+      <FileName>MinersWifeOwnedStates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseGameEntity">
+    <Position X="4.5" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQIAABAAAAAgAAAAEAAAAAAAAAAACAAAAAUAAAAAAA=</HashCode>
+      <FileName>BaseGameEntity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MinersWife">
+    <Position X="8.5" Y="10" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACABAAAgAAAAAAAIMAAAAgCAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>MinersWife.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Miner">
+    <Position X="4.5" Y="10" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAQAMABADEwwAAACAAIJAAAAAGAAAAAAABAAEBAAYAA=</HashCode>
+      <FileName>Miner.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Thief">
+    <Position X="0.5" Y="10" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gAQAEABAIAwQAAAAACIICAAAACAgBAAAADACCDAEAgA=</HashCode>
+      <FileName>Thief.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Telegram">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAggAAAAAAABAAAAAAAAAAAAEBAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Telegram.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="location_type">
+    <Position X="15.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAgAAAAAAAAAAAAAEAQABAAAAAAAAQA=</HashCode>
+      <FileName>Locations.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="message_type">
+    <Position X="14" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAACCIAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageTypes.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0008_1">
+    <Position X="14" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAA=</HashCode>
+      <FileName>EntityNames.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

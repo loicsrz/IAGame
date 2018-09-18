@@ -102,4 +102,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Repo%27s\IA for Games\IAGame\ClassDiagram.cd" />
+  </ItemGroup>
 </Project>
