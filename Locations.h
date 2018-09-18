@@ -7,7 +7,10 @@ enum location_type
   shack,
   goldmine,
   bank,
-  saloon
+  saloon,
+  prison,
+  thief_house
+		
 };
 
 

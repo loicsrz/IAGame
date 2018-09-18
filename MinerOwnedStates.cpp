@@ -102,6 +102,13 @@ void VisitBankAndDepositGold::Enter(Miner* pMiner)
 
 void VisitBankAndDepositGold::Execute(Miner* pMiner)
 {
+	// Send a message to the thief if he's there.
+	Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
+		pMiner->ID(),
+		ent_lupin,
+		Msg_HoldUp,
+		NO_ADDITIONAL_INFO);
+
   //deposit the gold
   pMiner->AddToWealth(pMiner->GoldCarried());
     

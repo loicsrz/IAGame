@@ -136,13 +136,17 @@
     <ClCompile Include="MinerOwnedStates.cpp" />
     <ClCompile Include="MinersWife.cpp" />
     <ClCompile Include="MinersWifeOwnedStates.cpp" />
+    <ClCompile Include="Thief.cpp" />
+    <ClCompile Include="ThiefOwnedStates.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Common\FSM\State.h" />
-    <ClInclude Include="..\..\Common\FSM\StateMachine.h" />
-    <ClInclude Include="..\..\Common\Messaging\Telegram.h" />
-    <ClInclude Include="..\..\Repo%27s\IAGame\ConsoleUtils.h" />
-    <ClInclude Include="..\..\Repo%27s\IAGame\CrudeTimer.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="Telegram.h" />
+    <ClInclude Include="ConsoleUtils.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="CrudeTimer.h" />
     <ClInclude Include="BaseGameEntity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
@@ -153,6 +157,8 @@
     <ClInclude Include="MinerOwnedStates.h" />
     <ClInclude Include="MinersWife.h" />
     <ClInclude Include="MinersWifeOwnedStates.h" />
+    <ClInclude Include="Thief.h" />
+    <ClInclude Include="ThiefOwnedStates.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
