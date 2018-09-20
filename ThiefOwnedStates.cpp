@@ -200,8 +200,7 @@ void GoToPrisonWithMiner::Execute(Thief* pThief)
 
 void GoToPrisonWithMiner::Exit(Thief* pThief)
 {
-	cout << "\n" << GetNameOfEntity(pThief->ID()) << ": "
-		<< "...";
+
 }
 
 bool GoToPrisonWithMiner::OnMessage(Thief* pThief, const Telegram& msg)
